@@ -11,66 +11,56 @@ $menu = $menu["menu"];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <title>WPU Hut</title>
   </head>
-  <body>
+  <body class="bg-gray-100">
     
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">    
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.png" width="120">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">All Menu</a>
+  <nav class="bg-gray-800 shadow">
+    <div class="container mx-auto px-4">    
+        <div class="flex justify-between h-16 items-center">
+            <a class="text-white" href="#">
+                <img src="img/logo.png" class="w-28">
+            </a>
+            <button class="text-white md:hidden">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden md:block">
+                <div class="flex space-x-4">
+                    <a class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium" href="#">All Menu</a>
+                </div>
             </div>
         </div>
     </div>
   </nav>
 
-    <div class="container">
+    <div class="container mx-auto px-4">
 
-        <div class="row mt-3">
-            <div class="col">
-                <h1>All Menu</h1>
-            </div>
+        <div class="my-8">
+            <h1 class="text-3xl font-bold text-gray-800">All Menu</h1>
         </div>
 
-        <div class="row">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <?php foreach ($menu as $row) : ?>
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <img src="img/menu/<?= $row["gambar"]; ?>" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $row["nama"]; ?></h5>
-                        <p class="card-text"><?= $row["deskripsi"]; ?></p>
-                        <h5 class="card-title">Rp. <?= $row["harga"]; ?></h5>
-                        <a href="#" class="btn btn-primary">Pesan Sekarang</a>
-                    </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="img/menu/<?= $row["gambar"]; ?>" class="w-full h-56 object-cover">
+                <div class="p-4">
+                    <h5 class="text-xl font-semibold mb-2"><?= $row["nama"]; ?></h5>
+                    <p class="text-gray-600 mb-4"><?= $row["deskripsi"]; ?></p>
+                    <h5 class="text-xl font-semibold mb-3">Rp. <?= $row["harga"]; ?></h5>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded inline-block">Pesan Sekarang</a>
                 </div>
             </div>
             <?php endforeach; ?>
         </div>
 
-
     </div>
 
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery and other scripts -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
