@@ -1,0 +1,30 @@
+[
+    {
+        "nama": "Muhammad Syahril Aprialsyah",
+        "umur": 21,
+        "nim": "2217020056",
+        "lulus": true,
+        "hobby": [
+            "coding",
+            "gaming"
+        ],
+        "pembimbing": {
+            "pembimbing1": "Haditya Prasetyo M.kom",
+            "pembimbing2": "Novia Lestari M.kom"
+        }
+    },
+    {
+       "nama": "Muhammad Syahril Aprialsyah",
+        "umur": 21,
+        "nim": "2217020056",
+        "lulus": true,
+        "hobby": [
+            "coding",
+            "gaming"
+        ],
+        "pembimbing": {
+            "pembimbing1": "Haditya Prasetyo M.kom",
+            "pembimbing2": "Novia Lestari M.kom"
+        }
+    }
+]
