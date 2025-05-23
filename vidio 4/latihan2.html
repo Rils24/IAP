@@ -1,160 +1,68 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <title>WPU Hut</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome untuk ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-    </style>
   </head>
-  <body class="bg-gray-50">
-    <!-- Navbar dengan gradient background -->
-    <nav class="bg-gradient-to-r from-red-600 to-red-800 shadow-lg">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-          <a class="flex items-center" href="#">
-            <img src="img/logo.png" width="120" alt="WPU Hut Logo" class="h-12">
-          </a>
-          
-          <!-- Mobile menu button -->
-          <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-white hover:text-gray-200 focus:outline-none">
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-          
-          <!-- Desktop menu -->
-          <div class="hidden md:flex space-x-6">
-            <a class="text-white font-medium border-b-2 border-yellow-400 px-1 py-1" href="#">All Menu</a>
-            <a class="text-white hover:text-yellow-200 hover:border-b-2 hover:border-yellow-400 px-1 py-1 transition duration-200" href="#">Pizza</a>
-            <a class="text-white hover:text-yellow-200 hover:border-b-2 hover:border-yellow-400 px-1 py-1 transition duration-200" href="#">Pasta</a>
-            <a class="text-white hover:text-yellow-200 hover:border-b-2 hover:border-yellow-400 px-1 py-1 transition duration-200" href="#">Nasi</a>
-            <a class="text-white hover:text-yellow-200 hover:border-b-2 hover:border-yellow-400 px-1 py-1 transition duration-200" href="#">Minuman</a>
-          </div>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a class="block text-white font-medium border-l-4 border-yellow-400 pl-2 py-2 mb-1" href="#">All Menu</a>
-          <a class="block text-white hover:bg-red-700 pl-2 py-2 mb-1 rounded transition duration-200" href="#">Pizza</a>
-          <a class="block text-white hover:bg-red-700 pl-2 py-2 mb-1 rounded transition duration-200" href="#">Pasta</a>
-          <a class="block text-white hover:bg-red-700 pl-2 py-2 mb-1 rounded transition duration-200" href="#">Nasi</a>
-          <a class="block text-white hover:bg-red-700 pl-2 py-2 mb-1 rounded transition duration-200" href="#">Minuman</a>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container mx-auto px-4 py-8">
-      <!-- Header dengan animasi -->
-      <div class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-gray-800 mb-2">Our Menu</h1>
-        <div class="w-24 h-1 bg-red-600 mx-auto"></div>
-      </div>
-
-      <!-- Filter buttons -->
-      <div class="flex flex-wrap justify-center gap-2 mb-10">
-        <button class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-200">All Menu</button>
-        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition duration-200">Pizza</button>
-        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition duration-200">Pasta</button>
-        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition duration-200">Nasi</button>
-        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition duration-200">Minuman</button>
-      </div>
-
-      <!-- Menu Grid -->
-      <div id="daftar-menu" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <!-- Sample menu items for preview (will be replaced by JS) -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-          <img src="/api/placeholder/400/320" alt="Pizza" class="w-full h-48 object-cover object-center">
-          <div class="p-4">
-            <span class="bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full uppercase tracking-wide">Pizza</span>
-            <h3 class="text-xl font-semibold mt-2 text-gray-800">Pepperoni Pizza</h3>
-            <p class="text-gray-600 mt-1 text-sm">Pepperoni, cheese, tomato sauce</p>
-            <div class="mt-3 flex justify-between items-center">
-              <span class="text-red-600 font-bold">Rp 75.000</span>
-              <button class="bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700 text-sm transition duration-200">
-                Add to Cart
-              </button>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">    
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">All Menu</a>
+            <a class="nav-item nav-link" href="#">Pizza</a>
+            <a class="nav-item nav-link" href="#">Pasta</a>
+            <a class="nav-item nav-link" href="#">Nasi</a>
+            <a class="nav-item nav-link" href="#">Minuman</a>
             </div>
-          </div>
         </div>
-        
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-          <img src="/api/placeholder/400/320" alt="Pasta" class="w-full h-48 object-cover object-center">
-          <div class="p-4">
-            <span class="bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-full uppercase tracking-wide">Pasta</span>
-            <h3 class="text-xl font-semibold mt-2 text-gray-800">Spaghetti Carbonara</h3>
-            <p class="text-gray-600 mt-1 text-sm">Cream, egg, cheese, beef bacon</p>
-            <div class="mt-3 flex justify-between items-center">
-              <span class="text-red-600 font-bold">Rp 58.000</span>
-              <button class="bg-red-600 text-white px-3 py-1 rounded-full hover:bg-red-700 text-sm transition duration-200">
-                Add to Cart
-              </button>
+    </div>
+  </nav>
+
+    <div class="container">
+
+        <div class="row mt-3">
+            <div class="col">
+                <h1>All Menu</h1>
             </div>
-          </div>
         </div>
-      </div>
+
+        <div class="row" id="daftar-menu">
+            
+        </div>
+
+
     </div>
 
-    <footer class="bg-gray-800 text-white mt-12 py-8">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-          <div class="mb-6 md:mb-0">
-            <img src="img/logo.png" width="120" alt="WPU Hut Logo" class="h-12 mb-3">
-            <p class="text-gray-400 max-w-md">Menyajikan berbagai menu pizza, pasta, dan nasi dengan kualitas terbaik untuk kepuasan pelanggan.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-          <p>&copy; 2025 WPU Hut. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      // Mobile menu toggle
-      document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        if (menu.classList.contains('hidden')) {
-          menu.classList.remove('hidden');
-        } else {
-          menu.classList.add('hidden');
-        }
-      });
 
-      // Load your original script
-      document.addEventListener('DOMContentLoaded', function() {
-        // Your existing script.js code can be placed here
-        // Assuming it populates #daftar-menu
-      });
-    </script>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
